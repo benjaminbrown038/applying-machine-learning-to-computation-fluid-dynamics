@@ -24,7 +24,12 @@ This single script demonstrates how **neural networks can approximate PDE soluti
 Install dependencies with:
 
 ```bash
-pip install numpy torch matplotlib
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+pip3 install -r requirements.txt
 
 python laplace_nn_full.py
 

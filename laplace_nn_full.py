@@ -12,6 +12,7 @@ import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
 from dataclasses import dataclass
+import pandas as pd
 
 # ------------------------------------------------------------------------
 # Boundary Condition
@@ -194,6 +195,26 @@ def plot_and_compare(cfg, u_fd, model, X, Y, Z):
     plot_slice("NN", nn_pred, f"{cfg.outdir}/nn.png")
     plot_slice("Err", err, f"{cfg.outdir}/err.png")
 
+
+def plot_training_log(cfg):
+    log_path = os.path.join(cfg.outdir, "training_log.csv")
+    if not os.path.exists(log_path):
+        print("No training log found.")
+        return
+
+    data = pd.read_csv(log_path)
+    plt.figure()
+    plt.plot(data["epoch"], data["train_loss"], label="Train Loss")
+    plt.plot(data["epoch"], data["val_loss"], label="Val Loss")
+    plt.xlabel("Epoch")
+    plt.ylabel("MSE Loss")
+    plt.title("Training vs Validation Loss")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(os.path.join(cfg.outdir, "training_curve.png"), dpi=150)
+    plt.close()
+    print(f"Saved training curve to {cfg.outdir}/training_curve.png")
 # ------------------------------------------------------------------------
 # Main Script
 # ------------------------------------------------------------------------
