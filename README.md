@@ -117,7 +117,7 @@ python laplace_nn_full.py \
   --train_frac 0.9 --seed 42 \
   --outdir outputs
 
-
+```
 📊 Features & Capabilities
 ✅ Physics Simulation
 
