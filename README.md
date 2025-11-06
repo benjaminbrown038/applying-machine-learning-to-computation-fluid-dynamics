@@ -118,44 +118,43 @@ python laplace_nn_full.py \
   --outdir outputs
 
 ```
+
 📊 Features & Capabilities
 ✅ Physics Simulation
 
-3D finite difference method
+3D finite difference method (FDM)
 
 Configurable grid resolution
 
-Jacobi iteration with tolerance-based stopping
+Jacobi iteration with tolerance-based convergence
 
-Dirichlet boundary conditions on each face
+Dirichlet boundary conditions on each cube face
 
-Vectorized NumPy implementation
+Efficient, vectorized NumPy implementation
 
 ✅ Machine Learning
 
-Sigmoid-based MLP
+Sigmoid-based Feedforward MLP
 
-Fully configurable architecture
+Fully configurable architecture (width, depth, activation, etc.)
 
 MSE loss with Adam optimizer
 
 Automatic train/validation split
 
-GPU acceleration when available
+Optional GPU acceleration (if available)
 
 ✅ Visualization
 
-2D slices at user-defined Z levels
+2D slices at arbitrary Z-levels
 
-Predicted vs. true fields
+Side-by-side Predicted vs. Ground Truth fields
 
-Error heatmaps
+Error heatmaps for spatial accuracy analysis
 
-Training loss curves
+Training loss curves across epochs
 
-Optional saving to the outputs/ directory
-
-directory
+Optional saving of all outputs to the outputs/ directory
 
 📌 Why This Project Matters
 
