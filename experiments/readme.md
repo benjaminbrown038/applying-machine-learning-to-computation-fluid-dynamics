@@ -36,9 +36,7 @@ python experiments/poisson_surrogate.py
 python experiments/heat_time.py
 ```
 
-✅ Laplace Equation
-Math (Markdown, renders correctly)
-∇2𝑢 = 0∇2 u = 0
+
 
 
 
