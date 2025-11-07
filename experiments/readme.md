@@ -36,18 +36,9 @@ python experiments/poisson_surrogate.py
 python experiments/heat_time.py
 ```
 
-flowchart TB
-    A[Steady-State Heat Block] --> B{No Internal Sources}
-    B --> C["nabla^2 u = 0"]
-    C --> D[Interior Temperature Field]
-
-    subgraph Boundaries
-        E["Hot Face: u = 1"]
-        F["Other Faces: u = 0"]
-    end
-
-    E --> C
-    F --> C
+✅ Laplace Equation
+Math (Markdown, renders correctly)
+∇2𝑢 = 0∇2 u = 0
 
 
 
