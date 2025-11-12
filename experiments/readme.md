@@ -42,3 +42,10 @@ Each file is a standalone program that can be executed directly:
 ```python3 experiments/poisson_surrogate.py```
 
 ```python3 experiments/heat_time.py```
+
+
+| Experiment            | PDE Type  | Equation                    | Physical Meaning                            |
+| --------------------- | --------- | --------------------------- | ------------------------------------------- |
+| **Laplace Baseline**  | Laplace   | ( \nabla^2 u = 0 )          | Steady-state heat or potential (no sources) |
+| **Poisson Surrogate** | Poisson   | ( \nabla^2 u = f )          | Heat or potential with internal generation  |
+| **Heat-Time**         | Diffusion | ( u_t = \alpha \nabla^2 u ) | Transient (time-dependent) heat flow        |
