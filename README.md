@@ -1,77 +1,51 @@
-# Applying Machine Learning to Computational Fluid Dynamics
+# Table of Contents
 
-Neural Surrogates for Laplace and PDE-Based Physics
+### Overview
 
-This repository contains a fully self-contained Python implementation demonstrating how machine learning can approximate solutions to partial differential equations (PDEs) — specifically the 3D Laplace equation, a fundamental model for steady-state heat conduction and potential flow.
+### Project Structure
 
-The project walks through the full workflow required to transform a classical numerical simulation into a trainable dataset for a neural network and evaluates how well the learned model reproduces ground-truth physics.
+### Experiments
 
+3.1 Purpose
 
-## Project Overview
+3.2 Running Experiments
 
+3.3 Physics Library (PDEs / FEA / Models)
 
-###  Numerical Physics Solver (Finite Differences)
+### Models
 
+4.1 Model Descriptions
 
+4.2 Training Workflow
 
-### Dataset Generation
+4.3 Inference Workflow
 
+### Data
 
+5.1 Data Format
 
-### Neural Surrogate Model
+5.2 Synthetic Generation
 
+5.3 Preprocessing
 
+### Installation
 
+### Usage
 
-### Visualization & Evaluation
+7.1 Running a Simulation
 
+7.2 Running a Model
 
+7.3 Running the Full Pipeline
 
-### Repository Structure
+### Diagrams
 
-```
-applying-machine-learning-to-computation-fluid-dynamics/
-│
-├── laplace_nn_full.py        # Full pipeline: solver → dataset → NN → plots
-├── requirements.txt           # Dependencies
-├── README.md                  # Project documentation
-└── outputs/                   # Generated plots, logs, models
-```
-All logic resides in a single, clear script — making it simple to read, modify, and extend.
+8.1 PDE / Physics Diagram
 
-### How the Script Works (Step-by-Step)
+8.2 Pipeline Architecture
 
-1. Define grid resolution and boundary conditions
+### Results
 
-2. Solve the Laplace equation numerically (Jacobi iteration)
+### References
 
-3. Convert the solution to a supervised dataset
-
-4. Train an MLP to approximate (x, y, z) → u
-
-5. Predict and visualize the learned field
-
-6. Compare neural vs. numerical solutions
-
-### Getting Started
-
-### Create Environment & Install Dependencies
-
-```
-python3 -m venv .venv
-source .venv/bin/activate
-pip3 install -r requirements.txt
-
-python laplace_nn_full.py
-
-
-python laplace_nn_full.py \
-  --nx 30 --ny 30 --nz 30 \
-  --max_iters 2000 --tol 1e-5 \
-  --hidden 128 --depth 3 \
-  --lr 1e-3 --epochs 3000 --batch_size 8192 \
-  --train_frac 0.9 --seed 42 \
-  --outdir outputs
-
-
-```
+### License
